@@ -1,0 +1,64 @@
+<!-- ##### SECTION Title ##### -->
+gusb-source
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GUsbSource ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ENUM GUsbSourceError ##### -->
+<para>
+
+</para>
+
+@G_USB_SOURCE_ERROR_INTERNAL: 
+
+<!-- ##### MACRO G_USB_SOURCE_ERROR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION g_usb_source_error_quark ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_source_set_callback ##### -->
+<para>
+
+</para>
+
+@source: 
+@func: 
+@data: 
+@notify: 
+
+

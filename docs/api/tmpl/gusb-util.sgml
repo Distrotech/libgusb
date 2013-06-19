@@ -1,0 +1,40 @@
+<!-- ##### SECTION Title ##### -->
+gusb-util
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO G_USB_RESERVED_PADDING ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION g_usb_strerror ##### -->
+<para>
+
+</para>
+
+@error_code: 
+@Returns: 
+
+

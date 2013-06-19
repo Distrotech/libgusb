@@ -1,0 +1,413 @@
+<!-- ##### SECTION Title ##### -->
+GUsbDevice
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GUsbDevice ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GUsbDevice:context ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUsbDevice:libusb-device ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUsbDevice:platform-id ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM GUsbDeviceClaimInterfaceFlags ##### -->
+<para>
+
+</para>
+
+@G_USB_DEVICE_CLAIM_INTERFACE_BIND_KERNEL_DRIVER: 
+
+<!-- ##### STRUCT GUsbDeviceClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+
+<!-- ##### ENUM GUsbDeviceDirection ##### -->
+<para>
+
+</para>
+
+@G_USB_DEVICE_DIRECTION_DEVICE_TO_HOST: 
+@G_USB_DEVICE_DIRECTION_HOST_TO_DEVICE: 
+
+<!-- ##### ENUM GUsbDeviceError ##### -->
+<para>
+
+</para>
+
+@G_USB_DEVICE_ERROR_INTERNAL: 
+@G_USB_DEVICE_ERROR_IO: 
+@G_USB_DEVICE_ERROR_TIMED_OUT: 
+@G_USB_DEVICE_ERROR_NOT_SUPPORTED: 
+@G_USB_DEVICE_ERROR_NO_DEVICE: 
+@G_USB_DEVICE_ERROR_NOT_OPEN: 
+@G_USB_DEVICE_ERROR_ALREADY_OPEN: 
+@G_USB_DEVICE_ERROR_CANCELLED: 
+@G_USB_DEVICE_ERROR_FAILED: 
+@G_USB_DEVICE_ERROR_LAST: 
+
+<!-- ##### ENUM GUsbDeviceRecipient ##### -->
+<para>
+
+</para>
+
+@G_USB_DEVICE_RECIPIENT_DEVICE: 
+@G_USB_DEVICE_RECIPIENT_INTERFACE: 
+@G_USB_DEVICE_RECIPIENT_ENDPOINT: 
+@G_USB_DEVICE_RECIPIENT_OTHER: 
+
+<!-- ##### ENUM GUsbDeviceRequestType ##### -->
+<para>
+
+</para>
+
+@G_USB_DEVICE_REQUEST_TYPE_STANDARD: 
+@G_USB_DEVICE_REQUEST_TYPE_CLASS: 
+@G_USB_DEVICE_REQUEST_TYPE_VENDOR: 
+@G_USB_DEVICE_REQUEST_TYPE_RESERVED: 
+
+<!-- ##### MACRO G_USB_DEVICE_ERROR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION g_usb_device_bulk_transfer ##### -->
+<para>
+
+</para>
+
+@device: 
+@endpoint: 
+@data: 
+@length: 
+@actual_length: 
+@timeout: 
+@cancellable: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_bulk_transfer_async ##### -->
+<para>
+
+</para>
+
+@device: 
+@endpoint: 
+@data: 
+@length: 
+@timeout: 
+@cancellable: 
+@callback: 
+@user_data: 
+
+
+<!-- ##### FUNCTION g_usb_device_bulk_transfer_finish ##### -->
+<para>
+
+</para>
+
+@device: 
+@res: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_claim_interface ##### -->
+<para>
+
+</para>
+
+@device: 
+@interface: 
+@flags: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_close ##### -->
+<para>
+
+</para>
+
+@device: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_control_transfer ##### -->
+<para>
+
+</para>
+
+@device: 
+@direction: 
+@request_type: 
+@recipient: 
+@request: 
+@value: 
+@idx: 
+@data: 
+@length: 
+@actual_length: 
+@timeout: 
+@cancellable: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_control_transfer_async ##### -->
+<para>
+
+</para>
+
+@device: 
+@direction: 
+@request_type: 
+@recipient: 
+@request: 
+@value: 
+@idx: 
+@data: 
+@length: 
+@timeout: 
+@cancellable: 
+@callback: 
+@user_data: 
+
+
+<!-- ##### FUNCTION g_usb_device_control_transfer_finish ##### -->
+<para>
+
+</para>
+
+@device: 
+@res: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_error_quark ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_get_address ##### -->
+<para>
+
+</para>
+
+@device: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_get_bus ##### -->
+<para>
+
+</para>
+
+@device: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_get_configuration ##### -->
+<para>
+
+</para>
+
+@device: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_get_manufacturer_index ##### -->
+<para>
+
+</para>
+
+@device: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_get_pid ##### -->
+<para>
+
+</para>
+
+@device: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_get_platform_id ##### -->
+<para>
+
+</para>
+
+@device: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_get_product_index ##### -->
+<para>
+
+</para>
+
+@device: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_get_serial_number_index ##### -->
+<para>
+
+</para>
+
+@device: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_get_string_descriptor ##### -->
+<para>
+
+</para>
+
+@device: 
+@desc_index: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_get_vid ##### -->
+<para>
+
+</para>
+
+@device: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_interrupt_transfer ##### -->
+<para>
+
+</para>
+
+@device: 
+@endpoint: 
+@data: 
+@length: 
+@actual_length: 
+@timeout: 
+@cancellable: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_interrupt_transfer_async ##### -->
+<para>
+
+</para>
+
+@device: 
+@endpoint: 
+@data: 
+@length: 
+@timeout: 
+@cancellable: 
+@callback: 
+@user_data: 
+
+
+<!-- ##### FUNCTION g_usb_device_interrupt_transfer_finish ##### -->
+<para>
+
+</para>
+
+@device: 
+@res: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_open ##### -->
+<para>
+
+</para>
+
+@device: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_release_interface ##### -->
+<para>
+
+</para>
+
+@device: 
+@interface: 
+@flags: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_reset ##### -->
+<para>
+
+</para>
+
+@device: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_usb_device_set_configuration ##### -->
+<para>
+
+</para>
+
+@device: 
+@configuration: 
+@error: 
+@Returns: 
+
+

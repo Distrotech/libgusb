@@ -1,0 +1,123 @@
+Version 0.1.6
+~~~~~~~~~~~~~
+Released: 2013-03-05
+
+Bugfixes:
+ - Do not use deprecated GLib functionality (Richard Hughes)
+ - Remove duplicate gtk-doc check in configure (David King)
+ - Unref the GMainloop after it has been run, not when just quit (Richard Hughes)
+
+Version 0.1.5
+~~~~~~~~~~~~~
+Released: 2013-02-05
+
+Bugfixes:
+ - Don't use the deprecated INCLUDES in Makefile.am (Richard Hughes)
+ - Fix documentation build (Christopher James Halse Rogers)
+ - Fix obvious typo in README (Hans Ulrich Niedermann)
+
+Version 0.1.4
+~~~~~~~~~~~~~
+Released: 2012-11-06
+
+New Features:
+ - Add GObject Introspection support (Evan Nemerson)
+ - Add g_usb_device_reset() to reset a connected device (Richard Hughes)
+ - Add Vala bindings (Evan Nemerson)
+
+Bugfixes:
+ - Assorted introspection annotation fixes (Evan Nemerson)
+ - Rename inconsistently named gusb_* symbols to g_usb_* (Evan Nemerson)
+
+Version 0.1.3
+~~~~~~~~~~~~~
+Released: 2011-12-05
+
+Bugfixes:
+ - Do not build with -Werror by default (Richard Hughes)
+ - Add a missing error enum value (Richard Hughes)
+
+Version 0.1.2
+~~~~~~~~~~~~~
+Released: 2011-11-11
+
+New Features:
+ - Call g_usb_device_list_coldplug() automatically (Richard Hughes)
+
+Bugfixes:
+ - Ignore EBUSY when trying to detach a kernel driver (Richard Hughes)
+ - Fix a build failure on Debian (Richard Hughes)
+
+Version 0.1.1
+~~~~~~~~~~~~~
+Released: 2011-11-01
+
+Notes:
+ - This release bumps soname to remove GUdevDevice from the public API.
+
+New Features:
+ - Add g_usb_device_get_platform_id (Richard Hughes)
+
+Bugfixes:
+ - Add usb-1.0 to the gusb.pc 'Requires' (Richard Hughes)
+ - Do not leak the GUdev API into the public API of GUsb (Richard Hughes)
+ - Do not try to set the currently running device configuration twice (Richard Hughes)
+ - Do not use g_simple_async_result_is_valid() as it fails for sync methods (Richard Hughes)
+
+Version 0.1.0
+~~~~~~~~~~~~~
+Released: 2011-09-15
+
+Notes:
+ - This is the first public release of GUsb!
+ - The library is not API or ABI stable -- you also have to define
+   G_USB_API_IS_SUBJECT_TO_CHANGE before including the header to
+   acknowlegde this.
+ - Quite a lot of functionality has been added by Richard, Debarshi and
+   Hans for this release, and we're open to new API ideas, patches and
+   bugreports.
+
+New Features:
+ - Add a debugging tool to exercise the API that is not installed (Richard Hughes)
+ - Add a simple self test framework (Richard Hughes)
+ - Build: AM_PROG_CC_C_O required (Javier Jardón)
+ - Build: Honor aclocal flags (Javier Jardón)
+ - Build: Use new libtool syntax only (Javier Jardón)
+ - Build: xz tarballs generation (Javier Jardón)
+ - Generate gtk-doc files and add some gtk-doc markup (Richard Hughes)
+ - GUsbContext: Ensure that there is only one GUsbSource for each GUsbContext (Debarshi Ray)
+ - GUsbContext: fix mapping of GLogLevelFlags to libusb debug level (Hans de Goede)
+ - GUsbContext: Turn into a proper gobject derived class (Hans de Goede)
+ - GUsbDevice: Add asynchronous bulk and control transfer (Debarshi Ray)
+ - GUsbDevice: Add functionality to do sync bulk, control and interrupt transfers (Richard Hughes)
+ - GUsbDevice: Add functions to get string descriptors (Hans de Goede)
+ - GUsbDevice: Add get bus / address methods (Hans de Goede)
+ - GUsbDevice: Add g_usb_device_interrupt_transfer_async() (Richard Hughes)
+ - GUsbDevice: Add GUsbDeviceList (Hans de Goede)
+ - GUsbDevice: Add g_usb_device_open() and g_usb_device_close() (Richard Hughes)
+ - GUsbDevice: Add some helpers for reporting not open functionality (Hans de Goede)
+ - GUsbDevice: Add some more detailed error codes (Richard Hughes)
+ - GUsbDevice: Add the ability to get elements of the device descriptor (Richard Hughes)
+ - GUsbDevice: Call g_usb_device_req_free only after we are done with the instance (Debarshi Ray)
+ - GUsbDevice: Check several methods for unopened device (Debarshi Ray)
+ - GUsbDevice: Ensure the new async methods return the correct exit codes on failure (Richard Hughes)
+ - GUsbDevice: Ensure we have the device descriptor before getting the vendor and product ID's (Richard Hughes)
+ - GUsbDevice: g_usb_device_bulk_transfer_finish: Use g_simple_async_result_is_valid (Debarshi Ray)
+ - GUsbDevice: g_usb_device_*_transfer_async: Report if the submission failed (Debarshi Ray)
+ - GUsbDeviceList: Add g_usb_device_list_find_by_vid_pid() as it's required in colord (Richard Hughes)
+ - GUsbDeviceList: Add g_usb_device_list_get_devices() to get the complete device list (Richard Hughes)
+ - GUsbDeviceList: Do not duplicate all devices if the user calls coldplug() twice (Richard Hughes)
+ - GUsbDeviceList: Make g_usb_device_list_add_dev() return TRUE if the device was added (Richard Hughes)
+ - GUsbDeviceList: Ref the device returned by g_usb_device_list_get_dev_by_bus_n_address() (Richard Hughes)
+ - GUsbDevice: Make several methods cancellable (Debarshi Ray)
+ - GUsbDevice: Move setting config / claiming of interface to their own methods (Hans de Goede)
+ - GUsbDevice: Set the GUsbContext for instal use in GUsbDevice (Richard Hughes)
+ - GUsbDevice: Turn into a wrapper around libusb_device (Hans de Goede)
+ - GUsbSource: Add a GError parameter to g_usb_source_new() (Richard Hughes)
+ - GUsbSource: g_usb_source_new won't return NULL (Debarshi Ray)
+ - GUsbSource: Make ref / unref the context it uses (Hans de Goede)
+ - Provide our own gusb_strerror function (Hans de Goede)
+ - Require users specify G_USB_API_IS_SUBJECT_TO_CHANGE when using libusb (Richard Hughes)
+ - Simplify the reference counting of the GSimpleAsyncResult instances (Debarshi Ray)
+ - Use standard GLogLevelFlags when setting the debug flags (Richard Hughes)
+ - Use the slice allocator for fixed size structs (Debarshi Ray)
